@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:background="@drawable/activity2_border_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="45sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526" />
+
+        <TextView
+            android:id="@+id/title_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/Indigo"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/activity2_rounded_button_search"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/search"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"/>
+
+        <EditText
+            android:layout_width="235sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/karla"
+            android:textSize="16sp"
+            android:autofillHints="search cities"
+            android:inputType=""
+            android:id="@+id/search_input"/>
+
+        <ImageView
+            android:id="@+id/search_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/delete" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
