@@ -88,111 +88,16 @@
 
     </LinearLayout>
 
-
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLookUp"
         android:layout_width="match_parent"
-        android:layout_height="600sp"
+        android:layout_height="550sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:paddingStart="20sp"
-            android:paddingEnd="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="180sp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/activity2_city_background">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="28dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/rubik_bold"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textColor="@color/Indigo"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingBottom="18sp"/>
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:id="@+id/textView2"
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:background="@drawable/round_teal"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/_36977"
-                        android:fontFamily="@font/rubik_bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/White"
-                        android:gravity="center"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/textView"
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:background="@drawable/round_green"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView6"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView2">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/_45401"
-                        android:fontFamily="@font/rubik_bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/White"
-                        android:gravity="center"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/textView6"
-                    android:layout_width="80sp"
-                    android:layout_height="80sp"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/round_red"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/_4143"
-                        android:fontFamily="@font/rubik_bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/White"
-                        android:gravity="center"/>
-
-                </LinearLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-
-    </ScrollView>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/item_look_up" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

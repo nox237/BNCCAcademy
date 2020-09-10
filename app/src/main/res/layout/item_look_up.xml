@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16sp"
+    app:cardElevation="12sp"
+    android:layout_marginTop="15sp"
+    android:layout_marginBottom="15sp"
+    android:layout_marginLeft="25sp"
+    android:layout_marginRight="25sp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/activity2_city_background"
+        android:padding="15sp">
+
+        <TextView
+            android:id="@+id/tvLookUpProvinceName"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/Indigo"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLookUpProvinceName"
+            android:layout_marginTop="15sp">
+
+            <LinearLayout
+                android:id="@+id/textView2"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:background="@drawable/round_teal"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tvLookUpConfirmedCase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center"
+                    android:text="@string/_36977"
+                    android:textColor="@color/White"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/textView"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:background="@drawable/round_green"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView2">
+
+                <TextView
+                    android:id="@+id/tvLookUpRecoveredCase"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center"
+                    android:text="@string/_45401"
+                    android:textColor="@color/White"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/textView6"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/round_red"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center"
+                    android:text="@string/_4143"
+                    android:textColor="@color/White"
+                    android:textSize="16sp"
+                    android:id="@+id/tvLookUpDeathCase"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
