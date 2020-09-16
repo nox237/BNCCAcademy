@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             openActivity2()
         }
+
+        imageButton.setOnClickListener {
+            infoDialog()
+        }
     }
 
     private fun openActivity2(){
@@ -25,5 +29,11 @@ class MainActivity : AppCompatActivity() {
             putExtra(TESTING, "Indonesia")
         }
         startActivity(intent)
+    }
+
+    private fun infoDialog() {
+        val intent = Intent(this, InfoDialogActivity::class.java)
+        startActivity(intent)
+
     }
 }
