@@ -4,19 +4,19 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class LookUpAdapter(private val lookUpList: MutableList<LookUpData>): RecyclerView.Adapter<LookUpViewHolder>(){
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LookUpViewHolder {
-        // Tempate viewHolder di buat / inisialisasi (dipanggil satu kali) atau ketika ada perubahan data
-        return LookUpViewHolder(
+class HotlineAdapter(private val lookUpList: MutableList<HotlineData>): RecyclerView.Adapter<HotlineViewHolder>(){
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotlineViewHolder {
+        // Tempat viewHolder di buat / inisialisasi (dipanggil satu kali) atau ketika ada perubahan data
+        return HotlineViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_look_up,
+                R.layout.item_hotline,
                 parent,
                 false
             )
         )
     }
 
-    override fun onBindViewHolder(holder: LookUpViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HotlineViewHolder, position: Int) {
         // tempat dimana kita akan bind viewholder dengan data
         holder.bind(lookUpList[position])
     }
@@ -26,7 +26,7 @@ class LookUpAdapter(private val lookUpList: MutableList<LookUpData>): RecyclerVi
         return lookUpList.size
     }
 
-    fun updateData(newList: List<LookUpData>) {
+    fun updateData(newList: List<HotlineData>) {
         lookUpList.clear()
         lookUpList.addAll(newList)
 
