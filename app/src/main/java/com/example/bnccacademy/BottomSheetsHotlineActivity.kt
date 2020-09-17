@@ -9,6 +9,7 @@ import android.widget.Toast.makeText
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.activity_bottom_sheets.*
+import kotlinx.android.synthetic.main.activity_bottom_sheets.progressBar
 import okhttp3.*
 import org.json.JSONArray
 import java.io.IOException
@@ -38,6 +39,10 @@ class BottomSheetsHotlineActivity : BottomSheetDialogFragment() {
 
         okHttpClient.newCall(request).enqueue(getCallback(hotlineAdapter))
         rvHotline.visibility = View.GONE
+
+        search_delete_btn.setOnClickListener {
+            this.dismiss()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
