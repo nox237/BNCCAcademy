@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import okhttp3.Call
-import okhttp3.Callback
-import okhttp3.OkHttpClient
-import okhttp3.Response
+import okhttp3.*
 import org.json.JSONArray
 import java.io.IOException
 
@@ -24,6 +21,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val request = Request.Builder()
+            .url("https://api.kawalcorona.com/indonesia/")
+            .build()
+
+        okHttpClient.newCall(request).enqueue(getCallback())
         button.setOnClickListener {
             openActivity2()
         }
