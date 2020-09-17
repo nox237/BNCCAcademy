@@ -13,6 +13,5 @@ class InfoDialogActivity : AppCompatActivity() {
         imgClose.setOnClickListener{
             finish()
         }
-//commit kedua
     }
 }
